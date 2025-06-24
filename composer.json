@@ -1,0 +1,24 @@
+{
+  "name": "ismailcakir/webscrapingapi",
+  "description": "Web scraping API client for Laravel",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "WebScrapingApi\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "WebScrapingApi\\WebScrapingApiServiceProvider"
+      ],
+      "aliases": {
+        "WebScrapingApi": "WebScrapingApi\\Facades\\WebScrapingApi"
+      }
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "symfony/http-client": "^6.0"
+  }
+}
