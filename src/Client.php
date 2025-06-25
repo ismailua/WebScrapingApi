@@ -1,7 +1,7 @@
 <?php
 namespace WebScrapingApi;
 
-use Illuminate\Support\Facades\Http;
+use Symfony\Component\HttpClient\HttpClient;
 
 class Client
 {
@@ -19,7 +19,7 @@ class Client
         $final_params = array("api_key" => $this->api_key, "url" => $url) + $params;
         $query = http_build_query($final_params);
         $final_url = $this->api_url."?".$query;
-        $httpClient = Http::create();
+        $httpClient = HttpClient::create();
 
         try {
             $http_response = $httpClient->request($method, $final_url,
