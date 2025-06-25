@@ -11,7 +11,7 @@ class Client
     public function __construct($key)
     {
         $this->api_key = $key;
-        $this->api_url = "https://api.webscrapingapi.com/v1";
+        $this->api_url = "https://api.webscrapingapi.com/v2";
     }
 
     public function request($method, $url,  $params = [], $headers = [], $body = [])
